@@ -1,0 +1,57 @@
+.mihosama{
+    background: url(../img/kabe.svg) no-repeat center top;
+    background-size: auto 100%;
+    position: relative;
+    &:before{
+        position: absolute;
+        display: block;
+        content: "";
+        width: 730px;
+        height: 100%;
+        z-index: -2;
+        background: #FFF;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    &:after{
+        position: absolute;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 100%;
+        z-index: -3;
+        background: #d4dad4;
+        top:0;
+        bottom: 0;
+    }
+}
+.mihosama_area{
+    width: 500px;
+    margin: 0 auto;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    right: 10%;
+    bottom: 0;
+}
+.mihosama_pref{
+    padding: 10% 0 0 0;
+    width: fit-content;
+    font-size: 60px;
+    font-weight: 600;
+    color: green;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    span{
+        margin: 0 auto 14% auto;
+        display: inline-block;
+        text-shadow: #FC0 1px 0 10px;
+    }
+}
+.leRotateIn span {
+    animation: 2s ease-in 5s infinite leRotateIn;
+}

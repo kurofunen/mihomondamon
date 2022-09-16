@@ -1,0 +1,296 @@
+//グラデ線
+/*下線を引く*/
+.buttonWap {
+	margin: 2% auto;
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+}
+.sen {
+    width: fit-content;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10% auto;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-image: linear-gradient(90deg, #ff0055 100%);
+    background-position: 0% 100%;
+    background-size: 0% 2px;
+    background-repeat: no-repeat;
+    transition-duration: 0.2s;
+}
+.sen {
+    background-size: 100% 2px;
+    background-image: linear-gradient(
+        90deg,
+        #a015ff 0%,
+        #2a79ff 9.74%,
+        #3fadff 22.25%,
+        #7df1ff 35.05%,
+        #3fffa7 47.58%,
+        #80ff7f 57.5%,
+        #a1ff2a 68.85%,
+        #c6da00 80.55%,
+        #ffa92a 89.82%,
+        #ff0055 100%
+    );
+}
+
+
+//さんかくグラデ
+.box {
+    height: 100vh;
+    background-color: #020318;
+}
+.players {
+    position: relative;
+    padding-top: 11vw;
+    background-color: #020318;
+    overflow: hidden;
+}
+.players:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: 11vw;
+    background-image: linear-gradient(
+        to top right,
+        #020318 0,
+        #020318 50%,
+        transparent 50.2%,
+        transparent 100%
+        );
+}
+.playersliner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 11vw;
+    clip-path: inset(0 0 0 100%);
+    transform: scale(-1);
+    transition-duration: 120ms;
+    transition-property: clip-path;
+    transition-timing-function: linear;
+    transition-delay: 500ms;
+    background-image: linear-gradient(
+        90deg,
+        #a015ff 0%,
+        #2a79ff 9.74%,
+        #3fadff 22.25%,
+        #7df1ff 35.05%,
+        #3fffa7 47.58%,
+        #80ff7f 57.5%,
+        #a1ff2a 68.85%,
+        #c6da00 80.55%,
+        #ffa92a 89.82%,
+        #ff0055 100%
+        );
+}
+.playersliner.active {
+    clip-path: inset(0 0 0 0%);
+}
+//mans
+.mans{
+    display: flex;
+}
+.boxmans{
+    padding: 30vw 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.mansfig{
+    position: relative;
+    z-index: 11;
+    width: 50%;
+    opacity: 0;
+    x: -100;
+    transition-duration: 0.05s;
+}
+.mansitem{
+    width: 50%;
+    overflow: hidden;
+}
+.mansitemname{
+    opacity: 0;
+    y: 100;
+    transition-duration: 0.05s;
+    transition-timing-function: linear;
+}
+.manstlp{
+    margin: 5% 0;
+}
+.manstlpspan{
+    width: fit-content;
+    clip-path: inset(0 100% 0 0);
+    color: #000;
+    background-color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition-duration: 0.07s;
+    transition-property: clip-path;
+    transition-timing-function: ease-in-out;
+}
+.manstlpspan01{
+    display: block;
+    margin: 0% 0 2% 0;
+    font-size: 50px;
+}
+.manstlpspan02{
+    display: block;
+    margin: 0% 0 2% 0;
+    font-size: 20px;
+}
+
+//細線と三角
+.mansline {
+    top: 35.5vw;
+    transform: rotate(-24deg);
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform-origin: center;
+    z-index: 3;
+    display: block;
+    width: 108vw;
+    height: 0;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    transition-property: clip-path;
+    transition-timing-function: linear;
+}
+
+.manstriangle{
+    display: block;
+    top: 0;
+    width: 100vw;
+    left: initial;
+    right: calc(( 100% - 100vw) / 2);
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    background-image: linear-gradient(to bottom right, transparent 0, transparent 50%, #fff 40%, #fff 100%), linear-gradient(0deg, #fff, #fff), linear-gradient(to bottom left, #fff 0, #fff 50%, transparent 50%, transparent 100%);
+    background-position: 0 0, 0 0, 0 30vw;
+    background-repeat: no-repeat;
+    clip-path: inset(0 0 0 100%);
+    opacity: 0.1;
+    transition-property: clip-path;
+    transition-timing-function: linear;
+    transition-duration: 120ms;
+    height: 60vw;
+    background-size: 100% 30.1vw, 100% 0, 100% 30vw;
+}
+.mansbtm{
+    margin: 5% 0 0 0;
+    padding: 2% 5%;
+    width: fit-content;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+    y:100;
+    position: relative;
+    text-align: center;
+    background-size:0 100%;
+    background-image: linear-gradient(90deg, #ff0055 100%);
+    transition-duration: 0.05s;
+    &:hover{
+        background-size:100% 100%;
+        background-image: linear-gradient(90deg, #a015ff 0%, #2a79ff 9.74%, #3fadff 22.25%, #7df1ff 35.05%, #3fffa7 47.58%, #80ff7f 57.5%, #a1ff2a 68.85%, #c6da00 80.55%, #ffa92a 89.82%, #ff0055 100%);
+    }
+}
+.mansbtm:before{
+    content: "";
+    position: absolute;
+    z-index: 99;
+    width: 15%;
+    height: 20%;
+    border-style: solid;
+    border-color: #fff;
+    border-image-source: linear-gradient(90deg, #a015ff 0%, #2a79ff 9.74%, #3fadff 22.25%, #7df1ff 35.05%, #3fffa7 47.58%, #80ff7f 57.5%, #a1ff2a 68.85%, #c6da00 80.55%, #ffa92a 89.82%, #ff0055 100%);
+    border-image-slice: 1;
+    border-image-width: 1;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    transition: 0.3s ease; 
+    border-width: 2px 0 0 2px;
+    position: absolute;
+    left: 0;
+    top:0
+}
+.mansbtm:after {
+    content: "";
+    position: absolute;
+    z-index: 99;
+    width: 15%;
+    height: 20%;
+    border-style: solid;
+    border-color: #fff;
+    border-image-source: linear-gradient(90deg, #a015ff 0%, #2a79ff 9.74%, #3fadff 22.25%, #7df1ff 35.05%, #3fffa7 47.58%, #80ff7f 57.5%, #a1ff2a 68.85%, #c6da00 80.55%, #ffa92a 89.82%, #ff0055 100%);
+    border-image-slice: 1;
+    border-image-width: 1;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    transition: 0.3s ease; 
+    border-width:0 2px 2px 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.manstext{
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(90deg, #a015ff 0%, #2a79ff 9.74%, #3fadff 22.25%, #7df1ff 35.05%, #3fffa7 47.58%, #80ff7f 57.5%, #a1ff2a 68.85%, #c6da00 80.55%, #ffa92a 89.82%, #ff0055 100%);
+    color: transparent;
+    font-size: 30px;
+    transition: color 0.3s ease;
+}
+.mansbtm:hover {
+    &:before,&:after{
+        display: none;
+    }
+    .manstext{
+        color: #FFF;
+        background-size:100% 100%;
+        background-image: linear-gradient(90deg, #a015ff 0%, #2a79ff 9.74%, #3fadff 22.25%, #7df1ff 35.05%, #3fffa7 47.58%, #80ff7f 57.5%, #a1ff2a 68.85%, #c6da00 80.55%, #ffa92a 89.82%, #ff0055 100%);
+    }
+}
+
+.reinbowbox{
+   height: 200px; 
+   width: 500px;
+   background: #ccc;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    background: repeating-linear-gradient(#00b1ff, #00b1ff 25px, #8be4fc 0, #8be4fc 50px);
+    animation: move-stripe1 .8s infinite linear;
+    font-size: 30px;
+    transition: color 0.3s ease;
+    &:hover{
+        
+    }
+}
+.reinbowboxunner{
+    font-size: 50px;
+    font-weight: 600;
+}
+@keyframes move-stripe1 {
+    0% {  background-position-y: 0;  }
+    100% {  background-position-y: -50px;  }
+}
+
+
+

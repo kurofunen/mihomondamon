@@ -1,0 +1,66 @@
+.mihosakanawap{
+    margin: 0% auto 0 auto;
+}
+.sakana_ul{
+    display: flex;
+    justify-content: space-around;
+}
+.sakana_li{
+    width: 500px;
+}
+
+.mihosamatext {
+    margin: 13% auto 0 auto;
+    padding: 1%;
+    border: 1px solid var(--myColor);
+    border-radius: 10px;
+    margin-right:10px;
+    text-align: center;
+}
+ .mihosamatext_h2, .mihosamatext_pref strong {
+  color:var(--myColor);
+  line-height: 1.7;
+  font-weight: 600;
+}
+.mihosamatext_pref{
+    line-height: 1.7;
+    color: #333;
+}
+.cool {
+    font-weight: 600;
+    width: auto;
+    margin: 5% auto 0 auto;
+    display:inline-block;
+    padding:10px;
+    color:white;
+    border-radius:8px;
+    background-color:var(--myColor);
+}
+ .copy__line{
+    text-align: center;
+}
+ .copy__t {
+  font-size: 80px;
+  font-weight: bold;
+  opacity: 0;
+  display: inline-block;
+    text-align: center;
+    margin:12% auto;
+}
+.mihosama_pref_box{
+  display:flex;
+  padding: 10% 0;
+}  
+.output{
+    padding: 2%;
+  margin:auto auto 0 5%;
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+    background: #FFF;
+    border: 5px solid #333;
+    border-radius: 50px;
+    text-align: center;
+    writing-mode: vertical-rl;
+    opacity:0;
+}

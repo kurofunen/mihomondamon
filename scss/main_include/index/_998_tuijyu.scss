@@ -1,0 +1,17 @@
+
+.page_top{
+    width: 100px;
+    height: 100px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFF;
+    background: #333;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    z-index: 99999;
+}

@@ -1,0 +1,84 @@
+@charset "utf-8";
+@import 'sass_base/mixin';
+@import 'sass_base/base';
+@import 'sass_base/animate';
+@import 'sass_base/_page_animete';
+@import 'sass_base/icon_arrow';
+@import 'sass_base/coding_guideline';
+@import 'sass_base/_parallax';
+body{
+    cursor: url(../img/sakana_cursol.png), auto;
+    
+}
+a{
+    text-decoration: none;
+}
+main{
+    overflow: hidden;
+}
+.wapper {
+    @include wapper_setting();    
+}
+
+//基本設定
+ul,li,dd,dt,dh {
+    list-style: none;
+}
+svg {
+    display: block;
+}
+
+.pc_only {
+    @include pc_only();
+}
+.sp_only {
+    @include sp_only();
+}
+
+.t_center {
+    text-align: center;
+}
+@for $i from 0 through 8 {
+    .pc_order_#{$i} {
+        order: $i;
+        @include media($sp) {
+            order: auto;
+        }
+    }
+    .fw_#{$i*100} {
+        font-wieght:$i*100;
+    }
+}
+.text_justify {
+    text-align: justify;
+    text-justify: inter-ideograph;    
+}
+.tunagi_pref{
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page{
+    height: 1000px;
+}
+.firstaccess{
+    background: #FFF;
+    height: 100vh;
+    width: 100%;
+    opacity: 1;
+    position: fixed;
+    top:0;
+    z-index: 999;
+    box-shadow: 200px 0px 100px 130px rgba(255,255,255,1);
+}
+//トップページ部分
+@import 'main_include/header/_header_pc';
+@import 'main_include/header/_header_sp';
+//トップページ部分
+@import 'main_include/index/_index';
+@import 'main_include/index/_page01';
+
+//フッター部分
+@import 'main_include/footer/_footer';
+@import 'lightbox.min';
